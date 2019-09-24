@@ -105,8 +105,8 @@ def taskrouter_tasks():
         except:
             task_model['WorkerName'] = ""
         # Workaround to Video channel task missing team name
-        if (task_model['channel'] == 'video'):
-            task_model['team'] = 'Support'
+        #if (task_model['channel'] == 'video'):
+            #task_model['team'] = 'Support'
 
         # Get previously stored recording url
         try:
