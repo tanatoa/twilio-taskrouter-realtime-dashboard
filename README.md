@@ -1,4 +1,4 @@
-Update: Code errors fixed, plugin updated to the latest revisions but the dashboard is unable to display live stats besides SLA and Task status.
+Update: Code errors fixed, plugins updated to the latest revision but the dashboard is unable to display live stats besides SLA and Task status.
 
 # Twilio TaskRouter Realtime Dashboard using Sync
 
