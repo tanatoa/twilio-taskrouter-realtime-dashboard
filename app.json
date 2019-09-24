@@ -1,7 +1,7 @@
 {
   "name": "Realtime TaskRouter Dashboard",
   "description": "Real-time TaskRouter statistics dashboard using Sync",
-  "repository": "https://github.com/ameerbadri/twilio-taskrouter-realtime-dashboard",
+  "repository": "https://github.com/aelharda/twilio-taskrouter-realtime-dashboard",
   "logo": "https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png",
   "keywords": ["python", "twilio", "taskrouter", "statistics", "dashboard"],
   "env": {
