@@ -89,7 +89,7 @@ def taskrouter_event():
     #sync_taskrouter_tasks()
     return 'OK'
 
-@app.route('/taskrouter_tasks', methods=['GET'])
+@app.route('/taskrouter_tasks', methods=['POST'])
 def taskrouter_tasks():
     current_tasks = client.taskrouter.workspaces(twilio_workspace_sid).tasks.list(ordering='Priority:desc,DateCreated:asc')
     task_model = {}
