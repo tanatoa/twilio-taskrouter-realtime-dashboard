@@ -31,7 +31,7 @@ twilio_workflow_sid = os.environ["TWILIO_WORKFLOW_SID"]
 # Create Client to access Twilio resources
 client = Client(twilio_account_sid, twilio_auth_token)
 
-@app.route('/sync_taskrouter_statistics', methods=['GET'])
+@app.route('/sync_taskrouter_statistics', methods=['PATCH'])
 def sync_taskrouter_statistics():
     # Get TaskRouter Statistics
     stats = {}
