@@ -31,14 +31,14 @@ twilio_workflow_sid = os.environ["TWILIO_WORKFLOW_SID"]
 # Create Client to access Twilio resources
 client = Client(twilio_account_sid, twilio_auth_token)
 
-@app.route('/sync_taskrouter_statistics', methods=['PATCH'])
+@app.route('/sync_taskrouter_statistics', methods=['GET'])
 def sync_taskrouter_statistics():
     # Get TaskRouter Statistics
     stats = {}
     # Get Workspace related stats from last 60 minutes
     statistics = client.taskrouter.workspaces(twilio_workspace_sid).statistics().fetch(minutes=60)
     stats['totalTasks'] = statistics.realtime['total_tasks']
-    stats['totalWorkers'] = statistics.realtime['total_available_workers']
+    stats['totalWorkers'] = statistics.realtime['total_workers']
     task_statuses = statistics.realtime['tasks_by_status']
     for (k, v) in task_statuses.items():
         print(k, v)
@@ -89,7 +89,7 @@ def taskrouter_event():
     #sync_taskrouter_tasks()
     return 'OK'
 
-@app.route('/taskrouter_tasks', methods=['PATCH'])
+@app.route('/taskrouter_tasks', methods=['GET'])
 def taskrouter_tasks():
     current_tasks = client.taskrouter.workspaces(twilio_workspace_sid).tasks.list(ordering='Priority:desc,DateCreated:asc')
     task_model = {}
