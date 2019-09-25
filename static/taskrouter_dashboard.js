@@ -112,9 +112,9 @@ var taskrouterDashboard = new Vue({
             self.taskList.push(task);
           }
         })
-        .catch(function (error) {
-          console.log(error);
-        })
+        //.catch(function (error) {
+          //console.log(error);
+        //})
     },
     taskCurrentStep: function (status) {
       return this.taskCurrentSteps[status];
