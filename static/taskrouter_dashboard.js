@@ -93,7 +93,8 @@ var taskrouterDashboard = new Vue({
             //task['team'] =  tasks[i]['team'].charAt(0).toUpperCase() + tasks[i]['team'].slice(1);
             task['recordingUrl'] = tasks[i]['RecordingUrl'];
             taskSid = task['taskSid'];
-            task['agentName'] = tasks[i]['WorkerName'];
+            //task['agentName'] = tasks[i]['WorkerName'];
+            task['agentName'] = tasks[i]['contact_uri'];
             task['priority'] = tasks[i]['Priority'];
             task['taskStatus'] = tasks[i]['TaskStatus'];
             if (task['taskStatus'] == 'completed') {
