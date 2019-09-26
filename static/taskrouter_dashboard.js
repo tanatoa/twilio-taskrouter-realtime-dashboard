@@ -111,9 +111,9 @@ var taskrouterDashboard = new Vue({
             self.taskList.push(task);
           }
         })
-        //.catch(function (error) {
-          //console.log(error);
-        //})
+        .catch(function (error) {
+          console.log(error);
+        })
     },
     taskCurrentStep: function (status) {
       return this.taskCurrentSteps[status];
@@ -154,7 +154,7 @@ var taskrouterDashboard = new Vue({
         }
         this.totalWorkers = data['totalWorkers'];
         this.currentWorkerActivity['offlineWorkers'] = data['activityOfflineWorkers'];
-        this.currentWorkerActivity['availableWorkers'] = data['activityAvailableWorkers'];
+        this.currentWorkerActivity['idleWorkers'] = data['activityIdleWorkers'];
         this.currentWorkerActivity['reservedWorkers'] = data['activityReservedWorkers'];
         this.currentWorkerActivity['busyWorkers'] = data['activityBusyWorkers'];
       }
