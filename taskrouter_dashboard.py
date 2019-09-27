@@ -45,11 +45,11 @@ def sync_taskrouter_statistics():
         task_status = k + 'Tasks'
         stats[task_status] = statistics.realtime['tasks_by_status'][k]
 
-    for x in statistics.activity_statistics['activity_statistics']:
+    for x in statistics.realtime['activity_statistics']:
         if (x['friendly_name'] == 'Offline'):
             stats['activityOfflineWorkers'] = x['workers']
-        elif (x['friendly_name'] == 'Idle'):
-            stats['activityIdleWorkers'] = x['workers']
+        elif (x['friendly_name'] == 'Available'):
+            stats['activityAvailableWorkers'] = x['workers']
         elif (x['friendly_name'] == 'Reserved'):
             stats['activityReservedWorkers'] = x['workers']
         elif (x['friendly_name'] == 'Busy'):
