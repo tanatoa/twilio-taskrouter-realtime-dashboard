@@ -154,7 +154,7 @@ var taskrouterDashboard = new Vue({
         }
         this.totalWorkers = data['totalWorkers'];
         this.currentWorkerActivity['offlineWorkers'] = data['activityOfflineWorkers'];
-        this.currentWorkerActivity['availableWorkers'] = data['activityAvailableWorkers'-'assignedTasks'];
+        this.currentWorkerActivity['availableWorkers'] = data['activityAvailableWorkers']-['assignedTasks'];
         this.currentWorkerActivity['reservedWorkers'] = data['activityReservedWorkers'];
         this.currentWorkerActivity['busyWorkers'] = data['activityBusyWorkers'];
       }
