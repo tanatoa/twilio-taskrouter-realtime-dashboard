@@ -40,7 +40,7 @@ var taskrouterDashboard = new Vue({
   },
   methods: {
     displayRecording: function (task) {
-      if (task.taskStatus == 'completed' && task.channel == 'Phone' && (task.recordingUrl).length > 1) {
+      if (task.taskStatus == 'completed' && task.channel == 'voice' && (task.recordingUrl).length > 1) {
         return true;
       }
       else {
@@ -87,7 +87,7 @@ var taskrouterDashboard = new Vue({
             task = {};
             task['taskSid'] = tasks[i]['TaskSid'];
             task['from'] = tasks[i]['name'].charAt(0).toUpperCase() + tasks[i]['name'].slice(1);
-            task['channel'] = tasks[i]['TaskChannelUniqueName'];
+            task['channel'] = tasks[i]['ChannelUniqueName'];
             //task['team'] =  tasks[i]['team'].charAt(0).toUpperCase() + tasks[i]['team'].slice(1);
             task['team'] = tasks[i]['team']  ? tasks[i]['team'].charAt(0).toUpperCase() + tasks[i]['team'].slice(1) : 'Support';
             task['recordingUrl'] = tasks[i]['RecordingUrl'];
