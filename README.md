@@ -1,3 +1,5 @@
+Update: Channel section not displaying images.
+
 # Twilio TaskRouter Realtime Dashboard using Sync
 
 In a modern contact center that serves customers over multiple channels, realtime monitoring of the tasks and their progress becomes an operational imperative.  Twilio provides all the necessary building blocks to build a contact center (https://github.com/nash-md/twilio-contact-center) and the ability to build a realtime task monitoring dashboard using Twilio Sync (https://www.twilio.com/sync).
