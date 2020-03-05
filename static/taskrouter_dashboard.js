@@ -10,6 +10,7 @@ var taskrouterDashboard = new Vue({
       pending: 0,
       reserved: 0,
       assigned: 0,
+      wrapping: 0,
       completed: 0,
       canceled: 0
     },
