@@ -16,6 +16,8 @@ var taskrouterDashboard = new Vue({
     totalWorkers: 0,
     currentWorkerActivity: {
       offlineWorkers: 0,
+      availableWorkers: 0,
+      unavailableWorkers: 0,
       idleWorkers: 0,
       reservedWorkers: 0,
       busyWorkers: 0
@@ -40,7 +42,7 @@ var taskrouterDashboard = new Vue({
   },
   methods: {
     displayRecording: function (task) {
-      if (task.taskStatus == 'completed' && task.channel == 'voice' && (task.recordingUrl).length > 1) {
+      if (task.taskStatus == 'completed' && task.channel == 'phone' && (task.recordingUrl).length > 1) {
         return true;
       }
       else {
@@ -86,8 +88,8 @@ var taskrouterDashboard = new Vue({
           for (var i in tasks) {
             task = {};
             task['taskSid'] = tasks[i]['TaskSid'];
-            task['from'] = tasks[i]['name'].charAt(0).toUpperCase() + tasks[i]['name'].slice(1);
-            task['channel'] = tasks[i]['ChannelUniqueName'];
+            task['from'] = tasks[i]['from'].charAt(0).toUpperCase() + tasks[i]['from'].slice(1);
+            task['channel'] = tasks[i]['type'].charAt(0).toUpperCase() + tasks[i]['type'].slice(1);;
             //task['team'] =  tasks[i]['team'].charAt(0).toUpperCase() + tasks[i]['team'].slice(1);
             task['team'] = tasks[i]['team']  ? tasks[i]['team'].charAt(0).toUpperCase() + tasks[i]['team'].slice(1) : 'Support';
             task['recordingUrl'] = tasks[i]['RecordingUrl'];
